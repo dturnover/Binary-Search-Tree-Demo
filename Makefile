@@ -1,11 +1,11 @@
 #linking
-lab8: lab8.o
-	g++ -o lab8 lab8.o
+bst: bst.o
+	g++ -o bst bst.o
 
 #compilation
-lab8.o: lab8.cpp lab8.o
-	g++ -c lab8.cpp -g -Iincludes
+bst.o: bst.cpp bst.o
+	g++ -c bst.cpp -g -Iincludes
 
 .PHONY: archive
 archive:
-	tar -cvzf $(USER)_lab8.tar.gz lab8.cpp BinarySearchTree.h dsexceptions.h sample.txt README.txt l8.out Makefile
+	tar -cvzf $(USER)_bst.tar.gz bst.cpp BinarySearchTree.h dsexceptions.h sample.txt README.txt bst.out Makefile
